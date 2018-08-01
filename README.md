@@ -1,1 +1,1 @@
-# AMsite.github.io
+# amsite.github.io
