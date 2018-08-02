@@ -53,13 +53,25 @@
 										}
 									</script>
 									<p><input type="number" name="name" id="name" value="" placeholder="Amount" />
-									<p><a href="javascript:deposit(name)">Make Deposit</a></p>
+									<p><a href="javascript:deposit(document.getElementById('name').value)" class="button">Deposit Funds</a></p>
 									<br>
 									<h3>Withdrawal Transation</h3>
-									<p><a href="#" onclick="withdrawal();return false;" class="button">Make Withdrawal</a></p>
+									<script>
+										function withdrawal(e) {
+											analytics.track('BTC Withdrawal Complete', {amount: e});
+										}
+									</script>
+									<p><input type="number" name="name" id="name" value="" placeholder="Amount" />
+									<p><a href="javascript:withdrawal(document.getElementById('name').value)" class="button">Withdrawal Funds</a></p>
 									<br>
 									<h3>Transfer Transation</h3>
-									<p><a href="#" onclick="deposit();return false;" class="button">Make Transfer</a></p>
+									<script>
+										function transfer(e) {
+											analytics.track('BTC Transfer Complete', {amount: e});
+										}
+									</script>
+									<p><input type="number" name="name" id="name" value="" placeholder="Amount" />
+									<p><a href="javascript:transfer(document.getElementById('name').value)" class="button">Transfer Funds</a></p>
 									<br>
 								</div>
 							</div>
