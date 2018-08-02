@@ -45,6 +45,18 @@
 								<p>Emulating various transactional events for Personas testing.</p>
 							</header>
 							<div class="flex flex-2">
+								<div class="col col1">
+									<h3>User Information</h3>
+									<script>
+										function identify(uID) {
+											analytics.identify(uID);
+										}
+									</script>
+									<p><input type="number" name="uID" id="name" value="" placeholder="User ID" />
+									<p><a href="javascript:deposit(document.getElementById('uID').value)" class="button">Create User</a></p>
+									<br>
+								</div>
+		
 								<div class="col col2">
 									<h3>Deposit Transation</h3>
 									<script>
