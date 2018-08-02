@@ -47,13 +47,19 @@
 							<div class="flex flex-2">
 								<div class="col col2">
 									<h3>Deposit Transation</h3>
-									<p><a href="#" class="button">Make Deposit</a></p>
+									<script>
+										function deposit() {
+											analytics.track('BTC Deposit Complete', {amount: 45.00});
+										}
+									</script>
+									<a href="javascript:deposit()">href</a>
+									<p><a href="#" class="button" onclick="javascript:deposit()">Make Deposit</a></p>
 									<br>
 									<h3>Withdrawal Transation</h3>
-									<p><a href="#" class="button">Make Withdrawal</a></p>
+									<p><a href="#" onclick="withdrawal();return false;" class="button">Make Withdrawal</a></p>
 									<br>
 									<h3>Transfer Transation</h3>
-									<p><a href="#" class="button">Make Transfer</a></p>
+									<p><a href="#" onclick="deposit();return false;" class="button">Make Transfer</a></p>
 									<br>
 								</div>
 							</div>
