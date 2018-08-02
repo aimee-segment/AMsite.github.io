@@ -48,12 +48,12 @@
 								<div class="col col2">
 									<h3>Deposit Transation</h3>
 									<script>
-										function deposit() {
-											analytics.track('BTC Deposit Complete', {amount: 45.00});
+										function deposit(e) {
+											analytics.track('BTC Deposit Complete', {amount: e});
 										}
 									</script>
-									<a href="javascript:deposit()">href</a>
-									<p><a href="#" class="button" onclick="javascript:deposit()">Make Deposit</a></p>
+									<p><input type="number" name="name" id="name" value="" placeholder="Amount" />
+									<p><a href="javascript:deposit(name)">Make Deposit</a></p>
 									<br>
 									<h3>Withdrawal Transation</h3>
 									<p><a href="#" onclick="withdrawal();return false;" class="button">Make Withdrawal</a></p>
