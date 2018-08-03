@@ -61,7 +61,7 @@
 									<h3>Deposit Transation</h3>
 									<script>
 										function deposit(e) {
-											analytics.track('BTC Deposit Complete', {amount: e});
+											analytics.track('BTC Deposit Complete', {amount: e, currency: 'BTC'});
 										}
 									</script>
 									<p><input type="number" name="name" id="name" value="" placeholder="Amount" />
@@ -70,7 +70,7 @@
 									<h3>Withdrawal Transation</h3>
 									<script>
 										function withdrawal(e) {
-											analytics.track('BTC Withdrawal Complete', {amount: e});
+											analytics.track('BTC Withdrawal Complete', {amount: e, currency: 'BTC'});
 										}
 									</script>
 									<p><input type="number" name="name1" id="name1" value="" placeholder="Amount" />
@@ -79,7 +79,7 @@
 									<h3>Transfer Transation</h3>
 									<script>
 										function transfer(e) {
-											analytics.track('BTC Transfer Complete', {amount: e});
+											analytics.track('BTC Transfer Complete', {amount: e, currency: 'BTC'});
 										}
 									</script>
 									<p><input type="number" name="name2" id="name2" value="" placeholder="Amount" />
