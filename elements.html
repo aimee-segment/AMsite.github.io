@@ -75,8 +75,8 @@
 										<form method="post" action="#">
 											<div class="row uniform">
 												<script>
-													function trackEvent(a, b, c, d) {
-														analytics.track("Form Submitted", {name: a, email: b, category: c, priority: d});
+													function trackEvent(a, b, c) {
+														analytics.track("Form Submitted", {name: a, email: b, category: c});
 													}
 												</script>
 												<div class="6u 12u$(xsmall)">
@@ -122,7 +122,7 @@
 												<!-- Break -->
 												<div class="12u$">
 													<ul class="actions">
-														<li><a href="javascript:trackEvent(document.getElementById('name').value, document.getElementById('email').value, document.getElementById('category').value, document.getElementById('priority').value)" class="button">Submit</a></li>
+														<li><a href="javascript:trackEvent(document.getElementById('name').value, document.getElementById('email').value, document.getElementById('category').value)" class="button">Submit</a></li>
 														<li><input type="reset" value="Reset" class="alt" /></li>
 													</ul>
 												</div>
