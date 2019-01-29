@@ -79,6 +79,8 @@ ga('ec:addProduct', {
 ga('ec:setAction', 'click', {    
   'list': 'Search Results'   
 });
+
+ga('send', 'event', 'Game', 'Product Viewed', 'e-commerce');
 												}
 											</script>
 											<li><a href="javascript:track('Product Viewed')" class="button special">Product Viewed Track</a></li>
