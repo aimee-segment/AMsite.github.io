@@ -51,11 +51,11 @@
 										<ul class="actions">
 											<script>
 												function track(e) {
-													analytics.track(e);
+													analytics.track(e, {product_id: '507f1f77bcf86cd799439011', sku: 'G-32', category: 'Games', name: 'Monopoly: 3rd Edition', brand: 'Hasbro', variant: '200 pieces', price: 18.99, quantity: 1, currency: 'USD', value: 18.99, url: 'https://www.example.com/product/path', image_url: 'https://www.example.com/product/path.jpg'});
 												}
 											</script>
-											<li><a href="javascript:track('User Login')" class="button special">Track</a></li>
-											<li><a href="javascript:track('Deposit Completed')" class="button">Track</a></li>
+											<li><a href="javascript:track('Product Viewed')" class="button special">Product Viewed Track</a></li>
+											<li><a href="javascript:track('Deposit Completed')" class="button">Deposit Completed Track</a></li>
 											<li><a href="javascript:track('Transfer Requested')" class="button alt">Track</a></li>
 										</ul>
 										<ul class="actions fit">
