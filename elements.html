@@ -26,6 +26,7 @@
 			gtag('js', new Date());
 			
 		  	gtag('config', 'UA-133445956-1');
+			ga('require', 'ec');
 		</script>
 
 	</head>
@@ -64,24 +65,17 @@
 											<script>
 												function track(e) {
 													analytics.track(e, {product_id: '507f1f77bcf86cd799439011', sku: 'G-32', category: 'Games', name: 'Monopoly: 3rd Edition', brand: 'Hasbro', variant: '200 pieces', price: 18.99, quantity: 1, currency: 'USD', value: 18.99, url: 'https://www.example.com/product/path', image_url: 'https://www.example.com/product/path.jpg'});
-													ga('require', 'ec');
-													ga('send', 'pageview');
-
-													ga('send', 'event', 'Video', 'play', 'cats.mp4');
 													
+													ga('ec:addProduct', {
+													  'id': '507f1f77bcf86cd799439011',
+													  'name': 'Monopoly: 3rd GA Edition',
+													  'category': 'Games', 
+													  'brand': 'Hasbro',
+													  'price': '18.99',
+													  'quantity': 1});
 
-ga('ec:addProduct', {
-  'id': '507f1f77bcf86cd799439011',
-  'name': 'Monopoly: 3rd GA Edition',
-  'category': 'Games', 
-  'brand': 'Hasbro',
-  'price': '18.99',
-  'quantity': '1'});
-
-ga('ec:setAction', 'click', {    
-  'list': 'Search Results'   
-});
-ga('send', 'event', 'enhanced ecommerce', 'Product Clicked', [Product]);
+													ga('ec:setAction', 'add');
+													ga('send', 'event', 'enhanced ecommerce', 'Product Clicked');
 												}
 											</script>
 											<li><a href="javascript:track('Product Viewed')" class="button special">Product Viewed Track</a></li>
