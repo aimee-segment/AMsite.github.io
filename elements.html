@@ -80,7 +80,7 @@
 													  'position': 1});
 
 													ga('ec:setAction', 'add');
-													ga('send', 'event', 'enhanced ecommerce', 'Product Clicked');
+													ga('send', 'event', 'enhanced ecommerce', 'Product Added');
 													
 													ga('ec:addProduct', {
 													  'id': '507f1f77bcf86cd799439090',
@@ -89,10 +89,18 @@
 													  'brand': 'Hasbro',
 													  'price': '34.99',
 													  'quantity': 2,
-													  'dimension1': 'medium'});
+													  'dimension1': 'medium',
+													  'position': 2});
 													ga('ec:setAction', 'add');
-													ga('send', 'event', 'enhanced ecommerce', 'Product Clicked');
-													ga('ec:setAction', 'purchase');
+													ga('send', 'event', 'enhanced ecommerce', 'Product Added');
+													ga('ec:setAction', 'purchase', {
+														  'id': 'T12345',
+														  'affiliation': 'Google Store - Online',
+														  'revenue': '37.39',
+														  'tax': '2.85',
+														  'shipping': '5.34',
+														  'coupon': 'SUMMER2013'    // User added a coupon at checkout.
+														});
 												}
 											</script>
 											<li><a href="javascript:track('Product Viewed')" class="button special">Product Viewed Track</a></li>
