@@ -76,10 +76,23 @@
 													  'brand': 'Hasbro',
 													  'price': '24.99',
 													  'quantity': 1,
-													  'dimension1': 'medium'});
+													  'dimension1': 'medium',
+													  'position': 1});
 
 													ga('ec:setAction', 'add');
 													ga('send', 'event', 'enhanced ecommerce', 'Product Clicked');
+													
+													ga('ec:addProduct', {
+													  'id': '507f1f77bcf86cd799439090',
+													  'name': 'Monopoly: 5th GA Edition',
+													  'category': 'Games', 
+													  'brand': 'Hasbro',
+													  'price': '34.99',
+													  'quantity': 2,
+													  'dimension1': 'medium'});
+													ga('ec:setAction', 'add');
+													ga('send', 'event', 'enhanced ecommerce', 'Product Clicked');
+													ga('ec:setAction', 'purchase');
 												}
 											</script>
 											<li><a href="javascript:track('Product Viewed')" class="button special">Product Viewed Track</a></li>
