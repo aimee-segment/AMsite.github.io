@@ -53,17 +53,26 @@
 				<!-- Section -->
 					<section class="wrapper style2">
 						<div class="inner">
-							<div class="flex flex-2">
-								<div class="col col1">
-									  <video id="my_video_1" class="video-js vjs-default-skin" width="640px" height="267px"
-      controls preload="none" poster='http://video-js.zencoder.com/oceans-clip.jpg'
-      data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
-    <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
-    <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
-  </video>
-								</div>
-							</div>
 							<iframe src="https://player.vimeo.com/video/401515218" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<script src="https://player.vimeo.com/api/player.js"></script>
+							<script>
+							    var iframe = document.querySelector('iframe');
+							    var player = new Vimeo.Player(iframe);
+							    var VimeoAnalytics = window.analytics.plugins.VimeoAnalytics
+							    var vimeoAnalytics = new VimeoAnalytics(player, '1880cf1de8350b6d08a7077055ccc35b')
+							    vimeoAnalytics.initialize()
+							</script>
+						</div>
+						<div class="inner">
+							<iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							<script src="https://player.vimeo.com/api/player.js"></script>
+							<script>
+							    var iframe = document.querySelector('iframe');
+							    var player = new Vimeo.Player(iframe);
+							    var VimeoAnalytics = window.analyticsPlugins.VimeoAnalytics
+							    var vimeoAnalytics = new VimeoAnalytics(player, '1880cf1de8350b6d08a7077055ccc35b')
+							    vimeoAnalytics.initialize()
+							</script>
 						</div>
 					</section>
 
